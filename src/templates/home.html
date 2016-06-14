@@ -22,5 +22,16 @@
     <input type="text" name="comment" placeholder="Comment" />
     <button type="submit">Submit Restaurant</button>
 </form>
+
+<form action="delete-restaurant" method="post">
+    <input type="number" name="id" placeholder="#"/>
+    <button type="submit">Delete Restaurant</button>
+</form>
+
+<ol>
+    {{#restaurants}}
+    <li><b>{{name}}</b> - {{location}} - Rating: {{rating}}/5 - {{comment}}</li>
+    {{/restaurants}}
+</ol>
 </body>
 </html>
